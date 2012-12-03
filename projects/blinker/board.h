@@ -19,25 +19,25 @@
 #include "AT91SAM7S256.h"
 #define __inline inline
 
-#define true	-1
+#define true    -1
 #define false   0
 
-//-----------------  
-// Leds Definition   
-//-----------------  
-//                                 PIO		PA    PB   PIN   
-#define LED1            (1<<8) // PA8		RD    PCK2  10   
-#define NB_LEB			1
+//-----------------
+// Leds Definition
+//-----------------
+//                                 PIO      PA    PB   PIN
+#define LED1            (1<<8) // PA8       RD    PCK2  10
+#define NB_LEB          1
 
 #define LED_MASK        (LED1)
 
 
-//--------------  
-// Master Clock   
-//--------------  
+//--------------
+// Master Clock
+//--------------
 
 #define EXT_OC          18432000   // Exetrnal ocilator MAINCK
 #define MCK             47923200   // MCK (PLLRC div by 2)
 #define MCKKHz          (MCK/1000) //
 
-#endif // Board_h   
+#endif // Board_h

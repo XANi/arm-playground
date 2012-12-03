@@ -1,13 +1,13 @@
 //  **********************************************************************************************
 //
-//  File Name	: isrsupport.c
-//  Title		: interrupt enable/disable functions
-//  Author		: Pascal Stang - Copyright (C) 2004
-//  Created		: 2004.05.05
-//  Revised		: 2004.07.12
-//  Version		: 0.1
-//  Target MCU	: ARM processors
-//  Editor Tabs	: 4
+//  File Name   : isrsupport.c
+//  Title       : interrupt enable/disable functions
+//  Author      : Pascal Stang - Copyright (C) 2004
+//  Created         : 2004.05.05
+//  Revised         : 2004.07.12
+//  Version         : 0.1
+//  Target MCU  : ARM processors
+//  Editor Tabs     : 4
 //
 //  NOTE: This code is currently below version 1.0, and therefore is considered
 //  to be lacking in some functionality or documentation, or may not be fully
@@ -16,8 +16,8 @@
 //  This code is distributed under the GNU Public License
 //  which can be found at http://www.gnu.org/licenses/gpl.txt
 //
-//  Note from Jim Lynch:  
-//  This is an abbreviated version of Pascal Stang's processor.c routine from the ARMLIB  
+//  Note from Jim Lynch:
+//  This is an abbreviated version of Pascal Stang's processor.c routine from the ARMLIB
 //      http://hubbard.engr.scu.edu/embedded/arm/armlib/index.html
 //
 //  **********************************************************************************************
