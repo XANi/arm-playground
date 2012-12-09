@@ -137,6 +137,11 @@ int     main (void) {
             pPIO->PIO_SODR = LED1;                  // turn LED1 (DS1) off
 
         for (j = 1000000; j != 0; j-- );            // wait 1 second  2000000
+        if ( IdleCount > 10 ) {
+          pPMC->PMC_PLLR = ((AT91C_CKGR_DIV & 14) |
+                      (AT91C_CKGR_PLLCOUNT & (10<<8)) |
+                      (AT91C_CKGR_MUL & (36<<16)));
+        }
 
         IdleCount++;                                // count # of times through the idle loop
 
