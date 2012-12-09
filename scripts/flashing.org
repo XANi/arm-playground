@@ -1,0 +1,4 @@
+* How to flash
+  - halt
+  - flash write_bank 0 binary.bin 0
+  - reset run
