@@ -34,6 +34,18 @@ extern  unsigned enableFIQ(void);
 unsigned int    FiqCount = 0;       // global uninitialized variable
 
 
+
+// init some defaults
+AT91PS_PIO    pPIO   = AT91C_BASE_PIOA;
+AT91PS_PMC    pPMC   = AT91C_BASE_PMC;
+AT91PS_USART  pUSART = AT91C_BASE_US0;
+AT91PS_PDC    pPDC   = AT91C_BASE_PDC_US0;
+AT91PS_MC     pMC    = AT91C_BASE_MC;
+AT91PS_AIC    pAIC   = AT91C_BASE_AIC;
+AT91PS_SYS    pSYS   = AT91C_BASE_SYS;
+AT91PS_ADC    pADC   = AT91C_BASE_ADC;
+AT91PS_RSTC   pRSTC  = AT91C_BASE_RSTC;
+
 //  *******************************************************
 //                     MAIN
 //  ******************************************************/
@@ -49,18 +61,12 @@ int     main (void) {
     // Turn on the peripheral clock for Timer0
     // ---------------------------------------
 
-    // pointer to PMC data structure
-    volatile AT91PS_PMC     pPMC = AT91C_BASE_PMC;
-
     // enable Timer0 peripheral clock
     pPMC->PMC_PCER = (1<<AT91C_ID_TC0);
 
 
     // Set up the PIO ports
     // --------------------
-
-    // pointer to PIO data structure
-    volatile AT91PS_PIO     pPIO = AT91C_BASE_PIOA;
 
     // PIO Output Enable Register - sets pins P0 - P3 to outputs
     pPIO->PIO_OER = LED_MASK;
@@ -71,9 +77,6 @@ int     main (void) {
 
     // Set up the Advanced Interrupt Controller AIC for Timer 0
     // --------------------------------------------------------
-
-    // pointer to AIC data structure
-    volatile AT91PS_AIC     pAIC = AT91C_BASE_AIC;
 
     // Disable timer 0 interrupt in AIC Interrupt Disable Command Register
     pAIC->AIC_IDCR = (1<<AT91C_ID_TC0);
