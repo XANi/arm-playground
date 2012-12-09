@@ -130,6 +130,11 @@ int     main (void) {
     enableFIQ();
 
 
+    // enable reset+}
+    pRSTC->RSTC_RCR = 0xA5000008;
+    pRSTC->RSTC_RMR = 0xA5000001;
+
+
     // endless background blink loop
     // -----------------------------
 
